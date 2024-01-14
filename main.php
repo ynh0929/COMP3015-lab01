@@ -19,7 +19,8 @@ function filterInvalidShows(array $shows): array
     $validShows =[];
     foreach($shows as $showName => $dateInfo)
     {
-        if($showName !== null && $showName !== '' && $dateInfo !== null && $dateInfo !== ''){
+        if($showName !== null && $showName !== '' && $dateInfo !== null && $dateInfo !== '')
+        {
             $validShows[$showName] = $dateInfo;
         }
     }
@@ -32,9 +33,10 @@ function filterInvalidShows(array $shows): array
  * @param array $shows: the shows to print
  * @return void
  */
-function displayShowInfo(array $shows):void
+function displayShowInfo(array $shows)
 {
-    foreach($shows as $showName => $dateInfo){
+    foreach($shows as $showName => $dateInfo)
+    {
         echo "<strong>$showName:</strong> $dateInfo<br>";
     }
 }
@@ -50,11 +52,10 @@ $shows = [
     '' => 'December 17, 1999 - Current', 
 ];
 
+// Here you can call filterInvalidShows and store the resulting array in a variable
 $validShows = filterInvalidShows($shows);
 
-// Here you can call filterInvalidShows and store the resulting array in a variable
 // In the HTML portion of the document we will open some PHP tags and output the show info.
-
 ?>
 
 <!DOCTYPE html>
